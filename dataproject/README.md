@@ -1,10 +1,5 @@
 # Dataproject
 
-Should contain a short introduction to your project, and show how to produce your results.
+In this project we seek to investigate the correlation between population growth and economic growth. Our thesis is that as the countries get developed economically, their population growth will slow down. To do this, we use macro data from the World Bank, ranging from 1960 to 2017, on GDP pr capita and various indicators of the population growth from six arbitrarily picked countries and the world. We will use the pandas package for data cleaning and to import the data from the World Bank. For the analysis, we will plot graphs from the data to get a quick overview of the tendencies of the population and economic growth. The study will not cover whether the economic growth is the cause of the lower population growth or it is the other way around, as the main scope of this study is to present the data.
 
-In this project we want to show the relationship between population growth and economic growth which indicates how developed a country is. In doing so we use data from the World Bank, where we look at the World as a whole, but also look at regions and/or countries. The focused variables in this project are the fertility rate and GDP which is very simplified way to look at this.
 
-cleaning
-visualizing
-
-hvad er i de forskellige ting
