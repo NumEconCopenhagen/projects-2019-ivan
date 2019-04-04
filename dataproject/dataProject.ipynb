@@ -7,7 +7,7 @@ except:
 	pass
 
 #%%
-#Importing packages
+# Importing packages
 
 import pandas as pd
 import numpy as np
@@ -20,7 +20,7 @@ from pandas_datareader import wb
 # Remember to install pip wbdata pip install pandas-datareader
 
 #%%
-#Cleaning data: choosing data, indicators
+# Cleaning data: choosing data, indicators
 
 countries = ["WLD", "EGY", "PRT", "ARG", "SWE", "SEN", "JPN", "FRA"]
 
@@ -28,8 +28,8 @@ indicators = {"NY.GDP.PCAP.KD":"GDP per capita", "SP.DYN.TFRT.IN":"Fertility Rat
               "SP.DYN.LE00.IN":"Life expectancy at birth", "SP.DYN.IMRT.IN":"Mortality rate, infant"}
 
 #%%
-#As we are interested in how the economic growth through the years(1970-2016) have affected the livingstandards for the chosen countries, 
-#we have chosen these indicators: GDP per Capita, Fertility Rate, Life expectancy at birth and Mortality rate, Infant. 
+# As we are interested in how the economic growth through the years(1970-2016) have affected the livingstandards for the chosen countries, 
+# we have chosen these indicators: GDP per Capita, Fertility Rate, Life expectancy at birth and Mortality rate, Infant. 
 
 data_wb = wb.download(indicator= indicators, country= countries, start=1960, end=2016)
 data_wb = data_wb.rename(columns = {"NY.GDP.PCAP.KD":"gdp_capita", "SP.DYN.TFRT.IN":"fert",  
@@ -38,7 +38,7 @@ data_wb = data_wb.reset_index()
 round(data_wb.head(-1), 2)
 
 #%%
-#Cleaning data: clearing missing data.
+# Cleaning data: clearing missing data.
 
 print(f"Original: {data_wb.shape[0]} observations, {data_wb.shape[1]} variables")
 del data_wb["mort"]
@@ -64,7 +64,7 @@ expec = data_wb["expec"]
 
 
 #%%
-#Figure 1: Plotting fertility rate for all the chosen countries
+# Figure 1: Plotting fertility rate for all the chosen countries
 
 fert_dev = data_wb[data_wb["country"].isin(['Argentina', 'Senegal', 'Japan', 'France', 'World', "Sweden",
                                               "Egypt, Arab rep.", "Portugal"])]
@@ -81,13 +81,13 @@ plt.gca().invert_xaxis()
 plot(fert_dev)
 
 #%%
-#Here we can see that overall the fertility rate has decreased in the time period (1960-2016), but it is clear that for the 
-#more developed countries have a lower fertility rate. 
-#We can see that Senegal has a fertility rate that approx 3.6 higher than Portugal.
+# Here we can see that overall the fertility rate has decreased in the time period (1960-2016), but it is clear that for the 
+# more developed countries have a lower fertility rate. 
+# We can see that Senegal has a fertility rate that approx 3.6 higher than Portugal.
 
 
 #%%
-#Interactive figure 2: GDP per capita and the fertility rate (1960-2016)
+# Interactive figure 2: GDP per capita and the fertility rate (1960-2016)
 def interactive_figure(country, data_wb):
     
     data_country = data_wb[data_wb.country == country]
@@ -108,7 +108,7 @@ def interactive_figure(country, data_wb):
     plt.gca().invert_xaxis()
 
 #%%
-#Showing the interactive figure 2
+# Showing the interactive figure 2
 widgets.interact(interactive_figure,
     year = widgets.fixed(year),
     data_wb = widgets.fixed(data_wb),
@@ -118,7 +118,7 @@ widgets.interact(interactive_figure,
 );
 
 #%%
-#Interactive figure 3: GDP per capita and the life expectancy at birth (1960-2016)
+# Interactive figure 3: GDP per capita and the life expectancy at birth (1960-2016)
 def interactive_figure(country, data_wb):
     
     data_country = data_wb[data_wb.country == country]
@@ -139,7 +139,7 @@ def interactive_figure(country, data_wb):
     plt.gca().invert_xaxis()
 
 #%%
-#Showing the interactive figure 3
+# Showing the interactive figure 3
 widgets.interact(interactive_figure,
     year = widgets.fixed(year),
     data_wb = widgets.fixed(data_wb),
@@ -155,4 +155,10 @@ widgets.interact(interactive_figure,
 # whole period while GDP per capita is falling from 1960-1995.
 
 #%%
+#Conclusion 
 
+# From the data presented in this analysis, we found tell that there seem to be a negative correlation 
+# between how wealthy a country is and the population growth as expected. As this was a short analysis, 
+# and the main objective was to present the data in a nice and easy way, there is a lot of aspects, there 
+# remain to be uncovered and a further analysis should include more data on economic growth and perhaps an 
+# econometric approach.
