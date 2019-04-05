@@ -9,7 +9,7 @@ import datetime
 
 from pandas_datareader import wb
 
-# Remember to install pip wbdata pip install pandas-datareader
+# Remember to pip install wbdata pip install pandas-datareader
 
 #%%
 # Cleaning data: choosing data, indicators
