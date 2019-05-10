@@ -1,2 +1,2 @@
 # Modelproject
-###### In this project we will model the Edgeworth Box, which is a graphical tool, describing the trade of two goods between two persons. The theory will be based on Hal R. Varian (2010)
+###### In this project we will model the Edgeworth Box, which is a graphical tool, describing the trade of two goods between two firms. The two firms produce pork and windmills, where the first firm has a comparative advantage on labor and the second firm has a comparative advantage of capital. The project gives the reader the opportunity to adjust the variables, and see the effect, for labor and capital intensity by an interactive model of the Edgeworth Box.
