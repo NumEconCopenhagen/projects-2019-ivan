@@ -1,12 +1,10 @@
-# Welcome to your NumEconCPH repository
+# Welcome to Ivan-repository
+This repository contains: 
 
-We have provided you with the following repository that contains the required structure for this course. **You should not change any folders in the root directory**.
+A dataproject which analysis of population growht and economic growth. dataProject.ipynb
 
-A short description of the files and folders:
+A modelproject which looks at a small economy (2x2 economy) gives a solution to how a producer should optimize his production. ModelProject.ipynb
 
-* [README.md](/README.md): gives a short introduction to your project. You should change this file so it gives an introduction to what your repository consists of, and how to run the code to get your output. The present README file is always present on [github](https://www.github.com/numeconcopenhagen/numeconcopenhagen-2018/blob/master/README.md).
-* [/binder](/binder/): The folder is used by mybinder.org to setup an interactive version of your repository. For details see this [guide](https://numeconcopenhagen.netlify.com/guides/mybinder/).
-* [/dataproject](/dataproject): The structure is as follows: it contains a jupyter notebook where all the results should be presented. Furthermore, there is a python module named the dataproject where you can write and structure all your code.
-* [/examproject](/examproject): Same structure as above.
-* [/modelproject](/modelproject): Same structure as above.
-* [.gitignore](/.gitignore): A textfile specifying files and folder that will not be uploaded to github, and will not be tracked by git.  
+An examproject with provided solutions for the given problems. examProject.ipynb
+
+Each folder has a README.md file which provides a short introduction of the project. All the results of projects are presented in jupyter notebook (.ipynb).
