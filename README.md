@@ -3,7 +3,7 @@ This repository contains:
 
 A dataproject which analysis of population growht and economic growth. dataProject.ipynb
 
-A modelproject which looks at a small economy (2x2 economy) gives a solution to how a producer should optimize his production. ModelProject.ipynb
+A modelproject which looks at a small economy gives a solution to how a producer should optimize his production. ModelProject.ipynb
 
 An examproject with provided solutions for the given problems. examProject.ipynb
 
