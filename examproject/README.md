@@ -10,4 +10,3 @@ The following topics where given:
  2. AS-AD model
 
  3. Exchange economy
-     - Solution for 3.5 is missing
